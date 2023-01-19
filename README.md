@@ -10,7 +10,7 @@
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 
-A simple MovieList App made in C# .NET 7
+A simple MovieList App made in C# .NET 7, that demonstrates full CRUD capabilities.
 ---
 
 <br>
