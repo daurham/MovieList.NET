@@ -1,0 +1,28 @@
+@model IEnumerable<MovieList2.Models.Movie>
+
+<div class="list">
+
+  @foreach (var movie in Model)
+  {
+    <div class="card" style="width: 18rem;">
+      <img src="@movie.ImageURL" class="card-img-btm" alt="@movie.Title">
+      <div class="card-body">
+        <h5 class="card-title">@movie.Title</h5>
+        <p class="card-text">ID: @movie.Id</p>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" checked="@movie.HasWatched">
+          <label class="form-check-label">
+            Watched?
+          </label>
+        </div>
+
+        <a class="sm btn btn-primary" href="/Movie?id=@movie.Id">View</a>
+        <a class="sm btn btn-success" href="/Movie/EditMovie?id=@movie.Id">Edit</a>
+        <a class="sm btn btn-danger" href="/Movie/DeleteMovie?id=@movie.Id">Delete</a>
+
+      </div>
+    </div>
+  }
+
+</div>

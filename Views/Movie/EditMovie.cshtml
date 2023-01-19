@@ -1,0 +1,25 @@
+@model MovieList2.Models.Movie
+
+
+<form asp-action="EditMovie">
+  @* Forgot to add ID here *@
+  <input asp-for="Id" type="hidden" class="form-control">
+
+  <div class="mb-3">
+    <label asp-for="Title" class="form-label">Movie Title</label>
+    <input asp-for="Title" type="text" value="@Model.Title" class="form-control">
+    <span asp-validation-for="Title" class="danger-text"></span>
+  </div>
+
+  <div class="mb-3">
+    <label asp-for="ImageURL" class="form-label">Movie Poster URL</label>
+    <input asp-for="ImageURL" type="text" value="@Model.ImageURL" class="form-control">
+  </div>
+
+  <div class="mb-3 form-check">
+    <input asp-for="HasWatched" type="checkbox" class="form-check-input">
+    <label class="form-check-label" asp-for="HasWatched" checked="@Model.HasWatched">Watched?</label>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

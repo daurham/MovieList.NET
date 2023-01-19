@@ -1,0 +1,18 @@
+@model MovieList2.Models.Movie
+
+<div>
+
+  <h1>@Model.Title</h1>
+
+  <img src="@Model.ImageURL" />
+  
+  <h3>Watched: @Model.HasWatched.ToString()</h3>
+
+  <span>
+    <a class="btn bt-primary" href="/Home">Back</a>
+    <a class="btn btn-success" href="/Movie/EditMovie?id=@Model.Id">Edit</a>
+    <a class="btn btn-danger" href="/Movie/DeleteMovie?id=@Model.Id">Delete</a>
+  </span>
+  
+  
+</div>
